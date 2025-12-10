@@ -28,4 +28,9 @@ public class StuffManager : MonoBehaviour
     {
         Debug.Log("Not implemented yet: StuffManager.AddItem");
     }
+
+    public static void AddRandomItem()
+    {
+        Debug.Log("Not implemented yet: StuffManager.AddRandomItem");
+    }
 }
