@@ -1,8 +1,18 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class StuffManager : MonoBehaviour
 {
     private static StuffManager _instance;
+
+    public static List<ItemData> Items => _instance._items;
+
+    public static List<ItemData> OwnedItems => _instance._ownedItems;
+
+    [SerializeField]
+    private List<ItemData> _items;
+
+    private List<ItemData> _ownedItems = new();
 
     void Awake()
     {
@@ -19,18 +29,18 @@ public class StuffManager : MonoBehaviour
 
     public static bool HasItem(ItemData item)
     {
-        Debug.Log("Not implemented yet: StuffManager.HasItem");
-
-        return false;
+        return _instance._ownedItems.Contains(item);
     }
 
     public static void AddItem(ItemData item)
     {
-        Debug.Log("Not implemented yet: StuffManager.AddItem");
+        if (HasItem(item))
+        {
+            return;
+        }
+
+        _instance._ownedItems.Add(item);
     }
 
-    public static void AddRandomItem()
-    {
-        Debug.Log("Not implemented yet: StuffManager.AddRandomItem");
-    }
+    public static void AddRandomItem() { }
 }

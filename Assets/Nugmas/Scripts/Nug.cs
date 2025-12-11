@@ -2,10 +2,15 @@ using UnityEngine;
 
 public class Nug : MonoBehaviour
 {
+    public Outfit MyOutfit => _myOutfit;
+
     public DoorUser MyDoorUser => _myDoorUser;
 
     [SerializeField]
     private Rigidbody2D _myRigidbody2D;
+
+    [SerializeField]
+    private Outfit _myOutfit;
 
     [SerializeField]
     private DoorUser _myDoorUser;
