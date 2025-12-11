@@ -21,6 +21,7 @@ public class NugController : MonoBehaviour
     protected void Update()
     {
         UpdateDoorUsage();
+        UpdateWardrobeUsage();
         UpdateMovement();
     }
 
@@ -29,6 +30,14 @@ public class NugController : MonoBehaviour
         if (_interactAction.triggered)
         {
             _nug.MyDoorUser.UseDoor();
+        }
+    }
+
+    private void UpdateWardrobeUsage()
+    {
+        if (_interactAction.triggered)
+        {
+            _nug.MyWardrobeUser.UseWardrobe();
         }
     }
 

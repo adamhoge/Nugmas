@@ -99,10 +99,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7434144913708542100}
+  - component: {fileID: 3891771798642918763}
   - component: {fileID: 1109515863962939728}
   - component: {fileID: 703283670663373869}
+  - component: {fileID: 1085455364595330460}
   - component: {fileID: 3958878388590036859}
-  - component: {fileID: 3891771798642918763}
   - component: {fileID: 7876538599046003704}
   - component: {fileID: 1305165050258134778}
   m_Layer: 0
@@ -132,6 +133,22 @@ Transform:
   - {fileID: 8739808460167804868}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3891771798642918763
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2743258748615121355}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83d36ff1144023f4c9f9a450974f659b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Nug
+  _myRigidbody2D: {fileID: 1109515863962939728}
+  _myOutfit: {fileID: 1305165050258134778}
+  _myDoorUser: {fileID: 703283670663373869}
+  _myWardrobeUser: {fileID: 1085455364595330460}
 --- !u!50 &1109515863962939728
 Rigidbody2D:
   serializedVersion: 5
@@ -171,6 +188,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4261f6889c66d7f489c53662f33c2e4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DoorUser
+--- !u!114 &1085455364595330460
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2743258748615121355}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5da1c4b7a2669a34ba18cc4aae68dde3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WardrobeUser
 --- !u!61 &3958878388590036859
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -217,21 +246,6 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.98, y: 0.98}
   m_EdgeRadius: 0
---- !u!114 &3891771798642918763
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2743258748615121355}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 83d36ff1144023f4c9f9a450974f659b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Nug
-  _myRigidbody2D: {fileID: 1109515863962939728}
-  _myOutfit: {fileID: 1305165050258134778}
-  _myDoorUser: {fileID: 703283670663373869}
 --- !u!210 &7876538599046003704
 SortingGroup:
   m_ObjectHideFlags: 0
@@ -242,7 +256,7 @@ SortingGroup:
   m_Enabled: 1
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_SortAtRoot: 0
 --- !u!114 &1305165050258134778
 MonoBehaviour:

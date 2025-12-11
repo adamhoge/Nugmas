@@ -6,6 +6,8 @@ public class Nug : MonoBehaviour
 
     public DoorUser MyDoorUser => _myDoorUser;
 
+    public WardrobeUser MyWardrobeUser => _myWardrobeUser;
+
     [SerializeField]
     private Rigidbody2D _myRigidbody2D;
 
@@ -14,6 +16,9 @@ public class Nug : MonoBehaviour
 
     [SerializeField]
     private DoorUser _myDoorUser;
+
+    [SerializeField]
+    private WardrobeUser _myWardrobeUser;
 
     public void MoveRight()
     {
