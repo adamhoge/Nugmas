@@ -12,6 +12,7 @@ public class StuffManager : MonoBehaviour
     [SerializeField]
     private List<ItemData> _items;
 
+    [SerializeField]
     private List<ItemData> _ownedItems = new();
 
     void Awake()

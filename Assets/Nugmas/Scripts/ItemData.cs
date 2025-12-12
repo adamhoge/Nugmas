@@ -1,9 +1,9 @@
 using UnityEngine;
 
+[CreateAssetMenu(fileName = "New Item", menuName = "Nugmas/Item Data")]
 public class ItemData : ScriptableObject
 {
-    public string ItemName;
+    public string Name;
     public ItemType ItemType;
-    public Sprite ItemSprite;
-    public Sprite ItemIcon;
+    public Sprite Sprite;
 }

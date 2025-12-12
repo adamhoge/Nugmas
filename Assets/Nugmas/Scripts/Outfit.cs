@@ -19,16 +19,16 @@ public class Outfit : MonoBehaviour
         switch (itemData.ItemType)
         {
             case ItemType.Eyes:
-                _eyesSpriteRenderer.sprite = itemData.ItemSprite;
+                _eyesSpriteRenderer.sprite = itemData.Sprite;
                 break;
             case ItemType.Mouth:
-                _mouthSpriteRenderer.sprite = itemData.ItemSprite;
+                _mouthSpriteRenderer.sprite = itemData.Sprite;
                 break;
             case ItemType.Hat:
-                _hatSpriteRenderer.sprite = itemData.ItemSprite;
+                _hatSpriteRenderer.sprite = itemData.Sprite;
                 break;
             case ItemType.Body:
-                _bodySpriteRenderer.sprite = itemData.ItemSprite;
+                _bodySpriteRenderer.sprite = itemData.Sprite;
                 break;
         }
     }

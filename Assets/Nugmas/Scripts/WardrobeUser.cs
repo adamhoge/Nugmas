@@ -36,7 +36,7 @@ public class WardrobeUser : MonoBehaviour
 
     public void UseWardrobe()
     {
-        if (!_canUserWardrobe)
+        if (!_canUserWardrobe || _isUsingWardrobe)
         {
             return;
         }
