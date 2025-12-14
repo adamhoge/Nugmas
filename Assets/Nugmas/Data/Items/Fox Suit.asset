@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f24473c5e901504680770ebf82118ba, type: 3}
   m_Name: Fox Suit
   m_EditorClassIdentifier: Assembly-CSharp::ItemData
+  Id: a1af769a-6f8c-467d-b65e-13db5865b6a4
   Name: Fox Suit
   ItemType: 3
   Sprite: {fileID: 21300000, guid: 2172e20eac8fd2047930dca55aad0779, type: 3}

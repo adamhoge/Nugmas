@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f24473c5e901504680770ebf82118ba, type: 3}
   m_Name: Grimace
   m_EditorClassIdentifier: Assembly-CSharp::ItemData
+  Id: 2de2bd5f-372c-480b-aa93-526b7552a2a8
   Name: Grimace
   ItemType: 1
   Sprite: {fileID: 21300000, guid: 849dc79ccd2673c4eaeff49ff5135819, type: 3}

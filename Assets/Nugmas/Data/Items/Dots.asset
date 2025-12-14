@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f24473c5e901504680770ebf82118ba, type: 3}
   m_Name: Dots
   m_EditorClassIdentifier: Assembly-CSharp::ItemData
+  Id: f03aca8c-d6b9-45fd-ad93-1934cb0c4d51
   Name: Dots
   ItemType: 0
   Sprite: {fileID: 21300000, guid: 208564c68dddc15469235982a048c8c9, type: 3}

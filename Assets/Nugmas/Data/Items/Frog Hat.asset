@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f24473c5e901504680770ebf82118ba, type: 3}
   m_Name: Frog Hat
   m_EditorClassIdentifier: Assembly-CSharp::ItemData
+  Id: c915ec4e-fb08-4591-b617-64f581f8c384
   Name: Frog Hat
   ItemType: 2
   Sprite: {fileID: 21300000, guid: db12e091bde11d74289b4e671a4dc8b7, type: 3}

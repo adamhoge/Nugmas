@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f24473c5e901504680770ebf82118ba, type: 3}
   m_Name: Headgehog
   m_EditorClassIdentifier: Assembly-CSharp::ItemData
+  Id: d9cb392d-adb3-40c7-9444-b5833ff550b6
   Name: Headgehog
   ItemType: 2
   Sprite: {fileID: 21300000, guid: 486b91ba7f34be54b9cb76c940e33b0d, type: 3}

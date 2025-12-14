@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f24473c5e901504680770ebf82118ba, type: 3}
   m_Name: Fedora
   m_EditorClassIdentifier: Assembly-CSharp::ItemData
+  Id: eb675eaa-9227-43a3-8f3d-3ffbe2f3444d
   Name: Fedora
   ItemType: 2
   Sprite: {fileID: 21300000, guid: b66fe9372e7fb0f4485c6a3ef8028933, type: 3}

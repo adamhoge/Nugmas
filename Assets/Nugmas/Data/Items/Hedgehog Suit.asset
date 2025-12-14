@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f24473c5e901504680770ebf82118ba, type: 3}
   m_Name: Hedgehog Suit
   m_EditorClassIdentifier: Assembly-CSharp::ItemData
+  Id: 6de33ab0-1746-4866-8df7-fd17c7af4d8e
   Name: Hedgehog Suit
   ItemType: 3
   Sprite: {fileID: 21300000, guid: d91a050d51d3fda4a9dd5671c1f9151f, type: 3}

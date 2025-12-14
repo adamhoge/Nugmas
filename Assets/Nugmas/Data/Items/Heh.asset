@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f24473c5e901504680770ebf82118ba, type: 3}
   m_Name: Heh
   m_EditorClassIdentifier: Assembly-CSharp::ItemData
+  Id: ccc8c932-62d8-45f2-b643-63ff2c9cab41
   Name: Default Mouth
   ItemType: 1
   Sprite: {fileID: 21300000, guid: e10b028495f570e4492bdb845f3dbd57, type: 3}

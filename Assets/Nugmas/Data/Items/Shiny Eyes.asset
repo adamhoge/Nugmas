@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f24473c5e901504680770ebf82118ba, type: 3}
   m_Name: Shiny Eyes
   m_EditorClassIdentifier: Assembly-CSharp::ItemData
+  Id: f562ed7b-c6ca-450f-a198-0601b8d61e98
   Name: Default Eyes
   ItemType: 0
   Sprite: {fileID: 21300000, guid: 82e2ef9547fa2c04cb7276429715b124, type: 3}

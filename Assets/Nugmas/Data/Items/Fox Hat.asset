@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f24473c5e901504680770ebf82118ba, type: 3}
   m_Name: Fox Hat
   m_EditorClassIdentifier: Assembly-CSharp::ItemData
+  Id: f729695a-8010-4cff-8387-40fb4965cd90
   Name: Fox Hat
   ItemType: 2
   Sprite: {fileID: 21300000, guid: fd5ee73e904afef40a27c55b08132b12, type: 3}

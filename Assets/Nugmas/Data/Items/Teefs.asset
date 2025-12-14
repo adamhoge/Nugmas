@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f24473c5e901504680770ebf82118ba, type: 3}
   m_Name: Teefs
   m_EditorClassIdentifier: Assembly-CSharp::ItemData
+  Id: 2700e88f-cefd-4761-b880-6a19a58349f4
   Name: Teefs
   ItemType: 1
   Sprite: {fileID: 21300000, guid: a4417c6202c23f848b03c93897faa1e0, type: 3}

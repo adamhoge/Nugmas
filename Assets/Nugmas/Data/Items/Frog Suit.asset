@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f24473c5e901504680770ebf82118ba, type: 3}
   m_Name: Frog Suit
   m_EditorClassIdentifier: Assembly-CSharp::ItemData
+  Id: 3626f409-48d9-4466-a5a3-17e355a215b2
   Name: Frog Suit
   ItemType: 3
   Sprite: {fileID: 21300000, guid: c2890b12860f698469823fd57e391f78, type: 3}
