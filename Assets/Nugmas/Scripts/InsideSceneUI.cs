@@ -20,16 +20,16 @@ public class InsideSceneUI : MonoBehaviour
 
         _nug.MyWardrobeUser.OnStartedUsingWardrobe += () =>
         {
-            _wardrobeUI.SetActive(true);
+            _wardrobeUI?.SetActive(true);
         };
 
         _nug.MyWardrobeUser.OnStoppedUsingWardrobe += () =>
         {
-            _wardrobeUI.SetActive(false);
+            _wardrobeUI?.SetActive(false);
         };
     }
 
-    private void Update()
+    void Update()
     {
         _useDoorPrompt.SetActive(_nug != null && _nug.MyDoorUser.CanUseDoor);
         _useWardrobePrompt.SetActive(_nug != null && _nug.MyWardrobeUser.CanUseWardrobe);
