@@ -1,3 +1,4 @@
+using System;
 using System.Linq;
 using UnityEngine;
 
@@ -25,29 +26,60 @@ public class Outfit : MonoBehaviour
         LoadOutfit();
     }
 
-    public void Wear(ItemData itemData)
+    public void Wear(ItemData itemData, bool save = true)
     {
         switch (itemData.ItemType)
         {
             case ItemType.Eyes:
                 _currentEyes = itemData;
-                _eyesSpriteRenderer.sprite = itemData.Sprite;
+                _eyesSpriteRenderer.sprite = itemData != null ? itemData.Sprite : null;
                 break;
             case ItemType.Mouth:
                 _currentMouth = itemData;
-                _mouthSpriteRenderer.sprite = itemData.Sprite;
+                _mouthSpriteRenderer.sprite = itemData != null ? itemData.Sprite : null;
                 break;
             case ItemType.Hat:
                 _currentHat = itemData;
-                _hatSpriteRenderer.sprite = itemData.Sprite;
+                _hatSpriteRenderer.sprite = itemData != null ? itemData.Sprite : null;
                 break;
             case ItemType.Body:
                 _currentBody = itemData;
-                _bodySpriteRenderer.sprite = itemData.Sprite;
+                _bodySpriteRenderer.sprite = itemData != null ? itemData.Sprite : null;
                 break;
         }
 
-        SaveOutfit();
+        if (save)
+        {
+            SaveOutfit();
+        }
+    }
+
+    public void Remove(ItemType itemType, bool save = true)
+    {
+        switch (itemType)
+        {
+            case ItemType.Eyes:
+                _currentEyes = null;
+                _eyesSpriteRenderer.sprite = null;
+                break;
+            case ItemType.Mouth:
+                _currentMouth = null;
+                _mouthSpriteRenderer.sprite = null;
+                break;
+            case ItemType.Hat:
+                _currentHat = null;
+                _hatSpriteRenderer.sprite = null;
+                break;
+            case ItemType.Body:
+                _currentBody = null;
+                _bodySpriteRenderer.sprite = null;
+                break;
+        }
+
+        if (save)
+        {
+            SaveOutfit();
+        }
     }
 
     // The items below would usually be implemented outside of this
@@ -55,52 +87,72 @@ public class Outfit : MonoBehaviour
 
     private void SaveOutfit()
     {
-        if (_currentEyes != null)
-        {
-            PlayerPrefs.SetString("EyesItemId", _currentEyes.Id);
-        }
-        if (_currentMouth != null)
-        {
-            PlayerPrefs.SetString("MouthItemId", _currentMouth.Id);
-        }
-        if (_currentHat != null)
-        {
-            PlayerPrefs.SetString("HatItemId", _currentHat.Id);
-        }
-        if (_currentBody != null)
-        {
-            PlayerPrefs.SetString("BodyItemId", _currentBody.Id);
-        }
+        PlayerPrefs.SetString("EyesItemId", _currentEyes != null ? _currentEyes.Id : string.Empty);
+
+        PlayerPrefs.SetString(
+            "MouthItemId",
+            _currentMouth != null ? _currentMouth.Id : string.Empty
+        );
+
+        PlayerPrefs.SetString("HatItemId", _currentHat != null ? _currentHat.Id : string.Empty);
+
+        PlayerPrefs.SetString("BodyItemId", _currentBody != null ? _currentBody.Id : string.Empty);
     }
 
     private void LoadOutfit()
     {
-        string eyesItemId = PlayerPrefs.GetString(
-            "EyesItemId",
-            "f562ed7b-c6ca-450f-a198-0601b8d61e98"
-        );
-        var itemData = StuffManager.Items.First(i => i.Id == eyesItemId);
-        Wear(itemData);
+        if (!PlayerPrefs.HasKey("EyesItemId"))
+        {
+            PlayerPrefs.SetString("EyesItemId", "f562ed7b-c6ca-450f-a198-0601b8d61e98");
+        }
 
-        string mouthItemId = PlayerPrefs.GetString(
-            "MouthItemId",
-            "ccc8c932-62d8-45f2-b643-63ff2c9cab41"
-        );
-        itemData = StuffManager.Items.Find(i => i.Id == mouthItemId);
-        Wear(itemData);
+        if (!PlayerPrefs.HasKey("MouthItemId"))
+        {
+            PlayerPrefs.SetString("MouthItemId", "ccc8c932-62d8-45f2-b643-63ff2c9cab41");
+        }
+
+        string eyesItemId = PlayerPrefs.GetString("EyesItemId");
+        if (!string.IsNullOrEmpty(eyesItemId))
+        {
+            var itemData = StuffManager.Items.Find(i => i.Id == eyesItemId);
+            Wear(itemData, save: false);
+        }
+        else
+        {
+            Remove(ItemType.Eyes, save: false);
+        }
+
+        string mouthItemId = PlayerPrefs.GetString("MouthItemId");
+        if (!string.IsNullOrEmpty(mouthItemId))
+        {
+            var itemData = StuffManager.Items.Find(i => i.Id == mouthItemId);
+            Wear(itemData, save: false);
+        }
+        else
+        {
+            Remove(ItemType.Mouth, save: false);
+        }
 
         string hatItemId = PlayerPrefs.GetString("HatItemId", string.Empty);
         if (!string.IsNullOrEmpty(hatItemId))
         {
-            itemData = StuffManager.Items.Find(i => i.Id == hatItemId);
-            Wear(itemData);
+            var itemData = StuffManager.Items.Find(i => i.Id == hatItemId);
+            Wear(itemData, save: false);
+        }
+        else
+        {
+            Remove(ItemType.Hat, save: false);
         }
 
         string bodyItemId = PlayerPrefs.GetString("BodyItemId", string.Empty);
         if (!string.IsNullOrEmpty(bodyItemId))
         {
-            itemData = StuffManager.Items.Find(i => i.Id == bodyItemId);
-            Wear(itemData);
+            var itemData = StuffManager.Items.Find(i => i.Id == bodyItemId);
+            Wear(itemData, save: false);
+        }
+        else
+        {
+            Remove(ItemType.Body, save: false);
         }
     }
 }

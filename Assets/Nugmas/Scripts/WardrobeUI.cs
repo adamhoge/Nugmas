@@ -1,4 +1,5 @@
 using System.Linq;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -55,18 +56,36 @@ public class WardrobeUI : MonoBehaviour
             Destroy(child.gameObject);
         }
 
-        var items = StuffManager.OwnedItems.Where(item => item.ItemType == _currentItemType);
+        var noItemButton = CreateItemButton(null);
 
+        var items = StuffManager.OwnedItems.Where(item => item.ItemType == _currentItemType);
         foreach (var item in items)
         {
-            var itemButtonObj = Instantiate(_itemButtonPrefab, _itemContentArea.transform);
-            var itemButton = itemButtonObj.GetComponent<ItemButton>();
-            itemButton.ItemData = item;
+            CreateItemButton(item);
+        }
+    }
 
+    private Button CreateItemButton(ItemData itemData)
+    {
+        var itemButtonObj = Instantiate(_itemButtonPrefab, _itemContentArea.transform);
+        var itemButton = itemButtonObj.GetComponent<ItemButton>();
+        itemButton.ItemData = itemData;
+
+        if (itemData != null)
+        {
             itemButtonObj.onClick.AddListener(() =>
             {
-                _nugOutfit.Wear(item);
+                _nugOutfit.Wear(itemData);
             });
         }
+        else
+        {
+            itemButtonObj.onClick.AddListener(() =>
+            {
+                _nugOutfit.Remove(_currentItemType);
+            });
+        }
+
+        return itemButtonObj;
     }
 }
