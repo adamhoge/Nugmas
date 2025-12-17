@@ -221,7 +221,7 @@ GameObject:
   - component: {fileID: 18408642}
   m_Layer: 0
   m_Name: Boundary Bottom
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2737,7 +2737,7 @@ EdgeCollider2D:
   m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 0863f9c45c77b6c45b3e1f55a55bcf44, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -2812,7 +2812,7 @@ EdgeCollider2D:
   m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 0863f9c45c77b6c45b3e1f55a55bcf44, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0

@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -9,13 +10,14 @@ public class NugController : MonoBehaviour
     [SerializeField]
     private PlayerInput _playerInput;
 
+    private InputAction _jumpAction;
     private InputAction _interactAction;
     private InputAction _moveAction;
-
     private void Start()
     {
         _interactAction = _playerInput.actions.FindAction("Interact");
         _moveAction = _playerInput.actions.FindAction("Move");
+        _jumpAction = _playerInput.actions.FindAction("Jump");
     }
 
     protected void Update()
@@ -44,7 +46,11 @@ public class NugController : MonoBehaviour
     private void UpdateMovement()
     {
         Vector2 moveInput = _moveAction.ReadValue<Vector2>();
-        if (moveInput.x > 0)
+        if (_jumpAction.triggered)
+        {
+            _nug.TryJump();
+        }
+        else if (moveInput.x > 0)
         {
             _nug.MoveRight();
         }
@@ -53,4 +59,5 @@ public class NugController : MonoBehaviour
             _nug.MoveLeft();
         }
     }
+      
 }

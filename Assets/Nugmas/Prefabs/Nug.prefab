@@ -145,6 +145,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83d36ff1144023f4c9f9a450974f659b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Nug
+  jumpPower: 5
+  accelerationPower: 0.1
   _myRigidbody2D: {fileID: 1109515863962939728}
   _myOutfit: {fileID: 1305165050258134778}
   _myDoorUser: {fileID: 703283670663373869}

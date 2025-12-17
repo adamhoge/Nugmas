@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Door
   - Wardrobe
+  - Damaging
+  - Ground
   layers:
   - Default
   - TransparentFX
