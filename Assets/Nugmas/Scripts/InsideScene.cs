@@ -31,7 +31,7 @@ public class InsideScene : MonoBehaviour
         _camera.orthographicSize = ZoomedOrthographicSize;
         _camera.transform.position = new Vector3(
             _nug.transform.position.x + ZoomedCameraOffset.x,
-            _nug.transform.position.y + ZoomedCameraOffset.y,
+            ZoomedCameraOffset.y,
             _camera.transform.position.z
         );
     }
