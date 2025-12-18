@@ -12,9 +12,6 @@ public class ItemButton : MonoBehaviour
     [SerializeField]
     private Image _itemImage;
 
-    [SerializeField]
-    private GameObject _noneObject;
-
     private ItemData _itemData;
 
     private void SetItemData(ItemData itemData)
@@ -29,7 +26,5 @@ public class ItemButton : MonoBehaviour
         {
             _itemImage.gameObject.SetActive(false);
         }
-
-        _noneObject.SetActive(_itemData == null);
     }
 }
