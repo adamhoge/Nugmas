@@ -16,12 +16,22 @@ public class Snowflake : MonoBehaviour
 
      private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("Snowflake Collide");
+        Debug.Log("Snowflake Trigger");
         Debug.Log(collision.tag);
         if (collision.tag == "Ground")
         {
             Debug.Log("poof");
+            GameManager.ResetScore();
+            OutsideSceneUI.instance.UpdateScore();
+            Destroy(this.gameObject);
+        }
+        else if (collision.gameObject.tag == "Player")
+        {
+            Debug.Log("grab");
+            GameManager.AddScore(1);
+            OutsideSceneUI.instance.UpdateScore();
             Destroy(this.gameObject);
         }
     }
+
 }

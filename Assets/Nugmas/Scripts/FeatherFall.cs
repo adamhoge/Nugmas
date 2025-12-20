@@ -5,14 +5,14 @@ using UnityEngine;
 [RequireComponent(typeof(BoxCollider2D), typeof(Rigidbody2D), typeof(ConstantForce2D))]
 public class FeatherFall : MonoBehaviour
 {
-    [SerializeField, Range(0.01f, 1f)]
+    [SerializeField, Range(0.00f, 1f)]
     private float m_FloatForce = 0.8f;
 
-    [SerializeField, Range(0.01f, 1f)]
+    [SerializeField, Range(0.00f, 1f)]
     private float m_SlidePower = 0.2f;
 
 
-    [SerializeField, Range(0.01f, 1f)]
+    [SerializeField, Range(0.00f, 1f)]
     private float m_PuffPower = 0.05f;
 
     [SerializeField, Range(0.01f, 1f)]

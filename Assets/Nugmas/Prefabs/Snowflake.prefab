@@ -49,8 +49,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0897dba3fea4d848b4939cc060f3607, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FeatherFall
-  m_FloatForce: 0.152
-  m_SlidePower: 0.01
+  m_FloatForce: 0.01
+  m_SlidePower: 0
   m_PuffPower: 0.05
   m_PuffDelayMin: 0.2
   m_PuffDelayMax: 0.3

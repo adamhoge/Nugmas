@@ -58,7 +58,6 @@ public class Nug : MonoBehaviour
      
      private void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log("Collide");
         Debug.Log(collision.collider.tag);
         if (collision.collider.tag == "Ground" && !grounded)
         {
