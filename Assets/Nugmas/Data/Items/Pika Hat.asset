@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f24473c5e901504680770ebf82118ba, type: 3}
+  m_Name: Pika Hat
+  m_EditorClassIdentifier: Assembly-CSharp::ItemData
+  Id: 31407b94-7e05-4d6f-8ed8-75f2299736a3
+  Name: Pika Hat
+  ItemType: 2
+  Sprite: {fileID: 21300000, guid: ad9a3708140b2a543907775022c4fead, type: 3}
