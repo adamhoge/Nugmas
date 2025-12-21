@@ -5,6 +5,8 @@ public class Present : MonoBehaviour
 
     public GameObject GetEffect = null;
     public GameObject DropEffect = null;
+
+    public GameObject ShowEffect = null;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -34,8 +36,18 @@ public class Present : MonoBehaviour
             Debug.Log("unwrap!");
             GameManager.AddScore(1);
 
-            StuffManager.AddRandomItem();
+            ItemData gottenItem = StuffManager.AddRandomItem();
+
             
+            if(!(gottenItem == null)) 
+            {
+                ParticleSystem presentPS = ShowEffect.GetComponent<ParticleSystem>();
+                presentPS.textureSheetAnimation.SetSprite(0, gottenItem.Sprite);
+                Instantiate(ShowEffect, transform.position, Quaternion.identity, GameObject.Find("GameManager").transform); 
+            }
+            
+            
+
             OutsideSceneUI.instance.UpdateScore();
             GameObject sfx = Instantiate(GetEffect, transform.position, Quaternion.identity, GameObject.Find("GameManager").transform);
             AudioSource ding = sfx.GetComponent<AudioSource>();

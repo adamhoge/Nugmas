@@ -134,6 +134,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Present
   GetEffect: {fileID: 6154780573232409663, guid: 2e596f62c0b77e54386ce229102ce045, type: 3}
   DropEffect: {fileID: 6154780573232409663, guid: ba91fd4543eb38f419405d40e4366408, type: 3}
+  ShowEffect: {fileID: 7505347635705653097, guid: ddf3be62a6a4a20419aa039bbe167246, type: 3}
 --- !u!60 &1486548679954723379
 PolygonCollider2D:
   m_ObjectHideFlags: 0

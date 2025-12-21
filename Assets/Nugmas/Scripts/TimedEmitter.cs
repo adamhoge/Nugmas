@@ -42,7 +42,7 @@ public class TimedEmitter : MonoBehaviour
             string emitType = "snowflake";
             timesSincePresent += 1;
             timesSinceIcicle += 1;
-            if (streak >= streakBeforePresents) {
+            if (streak >= streakBeforePresents && !StuffManager.GotEmAll()) {
                 int PresentResult = Random.Range(1,30) + GameManager.score;
                 if(PresentResult >= 30 || timesSincePresent >= 10) {
                     emitType = "present";
