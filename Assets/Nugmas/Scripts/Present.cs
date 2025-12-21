@@ -33,8 +33,10 @@ public class Present : MonoBehaviour
         {
             Debug.Log("unwrap!");
             GameManager.AddScore(1);
-            OutsideSceneUI.instance.UpdateScore();
+
             StuffManager.AddRandomItem();
+            
+            OutsideSceneUI.instance.UpdateScore();
             GameObject sfx = Instantiate(GetEffect, transform.position, Quaternion.identity, GameObject.Find("GameManager").transform);
             AudioSource ding = sfx.GetComponent<AudioSource>();
             float adj = Mathf.Round(Random.Range(0f,0.3f) * 100) / 100;  

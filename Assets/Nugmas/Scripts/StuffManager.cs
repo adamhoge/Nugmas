@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class StuffManager : MonoBehaviour
@@ -33,15 +34,24 @@ public class StuffManager : MonoBehaviour
         return _instance._ownedItems.Contains(item);
     }
 
-    public static void AddItem(ItemData item)
+    public static ItemData AddItem(ItemData item)
     {
         if (HasItem(item))
         {
-            return;
+            return item;
         }
-
         _instance._ownedItems.Add(item);
+        return item;
     }
 
-    public static void AddRandomItem() { }
+    public static ItemData AddRandomItem() { 
+        var unownedItems = _instance._items.Where(i => !HasItem(i)).ToList();
+        Debug.Log("unowned count: " + unownedItems.Count);
+        if(unownedItems.Count > 0) {
+            int index = Random.Range(0,unownedItems.Count); 
+            Debug.Log("index: " + index);
+            return AddItem(unownedItems[index]);
+        }
+        return null;
+    }
 }

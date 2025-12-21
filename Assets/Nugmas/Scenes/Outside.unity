@@ -11117,8 +11117,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RandomXMovement
   waitTime: 0.5
-  minimumX: -9
-  maximumX: 9
+  minimumX: -6
+  maximumX: 6
 --- !u!114 &1481137387
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11133,8 +11133,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::TimedEmitter
   snowflakeObject: {fileID: 1676141474317663731, guid: 8383eb7e7cf6010488015e6d91817896, type: 3}
   icicleObject: {fileID: 8051398852223483836, guid: ce4d0d099c3e320409f499be8b97eb6e, type: 3}
+  presentObject: {fileID: 8051398852223483836, guid: 9b157d217befffa46b6239581a5adae5, type: 3}
   minimumWaitTime: 0.5
   maximumWaitTime: 2
+  streakBeforePresents: 5
+  streakBeforeIcicles: 3
+  chanceOfIcicle: 25
 --- !u!1 &1495674459
 GameObject:
   m_ObjectHideFlags: 0
@@ -11165,7 +11169,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
   player: {fileID: 1559336834}
-  gameManagerScore: 0
+  gameManagerScore: 20
   highScore: 0
 --- !u!4 &1495674461
 Transform:

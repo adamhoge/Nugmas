@@ -124,6 +124,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c35f1911926d5b44a95141e4beb1bac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Snowflake
+  GetEffect: {fileID: 6154780573232409663, guid: cc0dda9ea0eebb640bd21518112dcd0d, type: 3}
 --- !u!61 &5956744180765066536
 BoxCollider2D:
   m_ObjectHideFlags: 0

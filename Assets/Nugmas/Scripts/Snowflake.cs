@@ -2,6 +2,9 @@ using UnityEngine;
 
 public class Snowflake : MonoBehaviour
 {
+
+    public GameObject GetEffect = null;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -30,6 +33,11 @@ public class Snowflake : MonoBehaviour
             Debug.Log("grab");
             GameManager.AddScore(1);
             OutsideSceneUI.instance.UpdateScore();
+            GameObject sfx = Instantiate(GetEffect, transform.position, Quaternion.identity, GameObject.Find("GameManager").transform);
+            AudioSource ding = sfx.GetComponent<AudioSource>();
+            float adj = Mathf.Round(Random.Range(-0.15f,0.15f) * 100) / 100;  
+            ding.pitch = 1 + adj;
+            Debug.Log(ding.pitch);
             Destroy(this.gameObject);
         }
     }

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 943667046254161463}
   - component: {fileID: 5408003956129556851}
   - component: {fileID: 3815167921101503165}
+  - component: {fileID: 8970013374271369336}
   - component: {fileID: 1486548679954723379}
   m_Layer: 0
   m_Name: Icicle
@@ -104,7 +105,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 0.75
+  m_Mass: 1
   m_LinearDamping: 0
   m_AngularDamping: 0
   m_GravityScale: 1
@@ -119,6 +120,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &8970013374271369336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8051398852223483836}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f0903a95bfda0940a4ee6764b54f8cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Icicle
+  HitEffect: {fileID: 6154780573232409663, guid: df6d29b2296b4b9439a02fd67be01e8f, type: 3}
 --- !u!60 &1486548679954723379
 PolygonCollider2D:
   m_ObjectHideFlags: 0
