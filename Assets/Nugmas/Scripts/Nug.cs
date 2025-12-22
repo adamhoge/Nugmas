@@ -49,10 +49,12 @@ public class Nug : MonoBehaviour
 
    public void MoveRight()
     {
+        //gameObject.transform.localScale = new Vector3(-1,1,1);
         _myRigidbody2D.linearVelocity = new Vector2(IncreaseSpeed(_myRigidbody2D.linearVelocityX), _myRigidbody2D.linearVelocityY);
     }
     public void MoveLeft()
     {
+        //gameObject.transform.localScale = new Vector3(1,1,1);
         _myRigidbody2D.linearVelocity = new Vector2(IncreaseSpeed(_myRigidbody2D.linearVelocityX,"left"), _myRigidbody2D.linearVelocityY);
     }
      

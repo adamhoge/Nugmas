@@ -33,7 +33,7 @@ public class SantaClaus : MonoBehaviour
                     Debug.Log("saved nextPresentTime: " + nextPresentTime);
                 }
                 else {
-                    nextPresentTime = SetNextPresentTime(sysnow, waitTime);
+                    nextPresentTime = SetNextPresentTime(sysnow, -5);
                 }
                 
                 
