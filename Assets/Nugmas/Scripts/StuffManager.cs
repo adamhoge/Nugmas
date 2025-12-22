@@ -37,7 +37,8 @@ public class StuffManager : MonoBehaviour
                 string[] savedOwnedItems = PlayerPrefs.GetString("ownedItems").Split(";");
                 foreach(string itemID in savedOwnedItems)
                 {
-                    AddItem(Items[int.Parse(itemID)]);
+                    Debug.Log("saved Item ID == " + itemID);
+                    AddItem(Items.Find(i => i.Id == itemID));
                 }
             }
         }
@@ -72,7 +73,8 @@ public class StuffManager : MonoBehaviour
             List<string> currentlyOwnedItems = new List<string>();
             foreach(ItemData thisItem in _instance._ownedItems)
                 {
-                    currentlyOwnedItems.Add(Items.IndexOf(thisItem).ToString());
+                    Debug.Log("this Item ID == " + thisItem.Id);
+                    currentlyOwnedItems.Add(thisItem.Id);
                 }
             PlayerPrefs.SetString("ownedItems",String.Join(";",currentlyOwnedItems));
             return unownedItems[index];

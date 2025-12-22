@@ -125,6 +125,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Snowflake
   GetEffect: {fileID: 6154780573232409663, guid: cc0dda9ea0eebb640bd21518112dcd0d, type: 3}
+  DropEffect: {fileID: 6154780573232409663, guid: 21d7bf15a03631445bf28d2025511ba4, type: 3}
 --- !u!61 &5956744180765066536
 BoxCollider2D:
   m_ObjectHideFlags: 0

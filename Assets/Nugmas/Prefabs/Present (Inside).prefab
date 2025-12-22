@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8306997442393324553}
   - component: {fileID: 1486548679954723379}
   m_Layer: 0
-  m_Name: Present
+  m_Name: Present (Inside)
   m_TagString: Present
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -105,10 +105,10 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 0.6
+  m_Mass: 0.0001
   m_LinearDamping: 0
   m_AngularDamping: 0
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2

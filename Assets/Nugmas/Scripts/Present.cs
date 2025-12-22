@@ -26,15 +26,21 @@ public class Present : MonoBehaviour
         if (collision.tag == "Ground")
         {
             Debug.Log("crash");
-            GameManager.ResetScore();
-            OutsideSceneUI.instance.UpdateScore();
-            GameObject sfx = Instantiate(DropEffect, transform.position, Quaternion.identity, GameObject.Find("GameManager").transform);
+            if(GameManager.instance) { GameManager.ResetScore(); }
+            if(OutsideSceneUI.instance) { OutsideSceneUI.instance.UpdateScore(); }    
+
+            GameObject sfx = Instantiate(DropEffect, transform.position, Quaternion.identity);
             Destroy(this.gameObject);
         }
         else if (collision.gameObject.tag == "Player")
         {
             Debug.Log("unwrap!");
-            GameManager.AddScore(1);
+            if(GameManager.instance) { GameManager.AddScore(1); }
+            if(OutsideSceneUI.instance) { OutsideSceneUI.instance.UpdateScore(); }    
+            if(SantaClaus.instance) { 
+                Debug.Log("Calling Santa.");
+                SantaClaus.instance.SetNextPresentTime(System.DateTime.Now, SantaClaus.instance.waitTime); 
+                }
 
             ItemData gottenItem = StuffManager.AddRandomItem();
 
@@ -43,13 +49,10 @@ public class Present : MonoBehaviour
             {
                 ParticleSystem presentPS = ShowEffect.GetComponent<ParticleSystem>();
                 presentPS.textureSheetAnimation.SetSprite(0, gottenItem.Sprite);
-                Instantiate(ShowEffect, transform.position, Quaternion.identity, GameObject.Find("GameManager").transform); 
+                Instantiate(ShowEffect, transform.position, Quaternion.identity); 
             }
-            
-            
-
-            OutsideSceneUI.instance.UpdateScore();
-            GameObject sfx = Instantiate(GetEffect, transform.position, Quaternion.identity, GameObject.Find("GameManager").transform);
+        
+            GameObject sfx = Instantiate(GetEffect, transform.position, Quaternion.identity);
             AudioSource ding = sfx.GetComponent<AudioSource>();
             float adj = Mathf.Round(Random.Range(0f,0.3f) * 100) / 100;  
             ding.pitch = 1 + adj;

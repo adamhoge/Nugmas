@@ -8,6 +8,8 @@ TagManager:
   - Wardrobe
   - Damaging
   - Ground
+  - MusicPlayer
+  - Present
   layers:
   - Default
   - TransparentFX
