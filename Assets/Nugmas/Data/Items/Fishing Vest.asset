@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8f24473c5e901504680770ebf82118ba, type: 3}
-  m_Name: Big Glasses
+  m_Name: Fishing Vest
   m_EditorClassIdentifier: Assembly-CSharp::ItemData
-  Id: f3dbf9ed-20e8-46ac-ba50-f6652397c9fa
-  Name: Big Glasses
-  ItemType: 0
-  Sprite: {fileID: 21300000, guid: 7d6e4e9e4e22d5a4ea3469e22938f2c1, type: 3}
+  Id: 860f92e2-e67a-45d8-ba77-0aa25aeb76ca
+  Name: Fishing Vest
+  ItemType: 3
+  Sprite: {fileID: 21300000, guid: 3f93aafd8319c4843a24ec3375d043cf, type: 3}

@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8f24473c5e901504680770ebf82118ba, type: 3}
-  m_Name: Big Glasses
+  m_Name: Hair and Bandana
   m_EditorClassIdentifier: Assembly-CSharp::ItemData
-  Id: f3dbf9ed-20e8-46ac-ba50-f6652397c9fa
-  Name: Big Glasses
-  ItemType: 0
-  Sprite: {fileID: 21300000, guid: 7d6e4e9e4e22d5a4ea3469e22938f2c1, type: 3}
+  Id: 6f50d1b1-ae7c-41ae-b470-7b0bb60285fc
+  Name: Hair and Bandana
+  ItemType: 2
+  Sprite: {fileID: 21300000, guid: 49113aae7d55ec94cb93d0d0960cb53e, type: 3}

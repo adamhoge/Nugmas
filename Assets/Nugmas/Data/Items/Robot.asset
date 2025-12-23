@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8f24473c5e901504680770ebf82118ba, type: 3}
-  m_Name: Big Glasses
+  m_Name: Robot
   m_EditorClassIdentifier: Assembly-CSharp::ItemData
-  Id: f3dbf9ed-20e8-46ac-ba50-f6652397c9fa
-  Name: Big Glasses
-  ItemType: 0
-  Sprite: {fileID: 21300000, guid: 7d6e4e9e4e22d5a4ea3469e22938f2c1, type: 3}
+  Id: e7cd2ef3-f951-4d65-b886-12e91e5c99d7
+  Name: Robot
+  ItemType: 2
+  Sprite: {fileID: 21300000, guid: da38cabbe92aa904ab8dfa146ad7aa96, type: 3}
