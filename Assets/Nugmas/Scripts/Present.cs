@@ -17,7 +17,7 @@ public class Present : MonoBehaviour
     {
         Debug.Log("Present Trigger");
         Debug.Log(collision.tag);
-        if (collision.tag == "Ground")
+        if (GameManager.instance && collision.tag == "Ground")
         {
             Debug.Log("crash");
             if (GameManager.instance)
