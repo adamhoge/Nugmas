@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class Nug : MonoBehaviour
 {
+    public delegate void Moved();
+
+    public event Moved OnMoved;
+
     public Outfit MyOutfit => _myOutfit;
     public float jumpPower = 10.0f;
     public float accelerationPower = 0.1f;
@@ -32,6 +36,8 @@ public class Nug : MonoBehaviour
         {
             grounded = false;
             _myRigidbody2D.AddForce(transform.up * jumpPower, ForceMode2D.Impulse);
+
+            OnMoved?.Invoke();
         }
     }
 
@@ -57,6 +63,8 @@ public class Nug : MonoBehaviour
             IncreaseSpeed(_myRigidbody2D.linearVelocityX),
             _myRigidbody2D.linearVelocityY
         );
+
+        OnMoved?.Invoke();
     }
 
     public void MoveLeft()
@@ -66,6 +74,8 @@ public class Nug : MonoBehaviour
             IncreaseSpeed(_myRigidbody2D.linearVelocityX, "left"),
             _myRigidbody2D.linearVelocityY
         );
+
+        OnMoved?.Invoke();
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

@@ -5,11 +5,18 @@ public class OutsideSceneUI : MonoBehaviour
 {
     public static OutsideSceneUI instance;
 
+    public TextMeshPro ScoreText = null;
+
+    public TextMeshPro HighScoreText = null;
+
+    [SerializeField]
+    private Nug _nug;
+
     [SerializeField]
     private DoorUser _nugDoorUser;
 
-    public TextMeshPro ScoreText = null;
-    public TextMeshPro HighScoreText = null;
+    [SerializeField]
+    private GameObject _title;
 
     [SerializeField]
     private GameObject _useDoorPrompt;
@@ -29,6 +36,21 @@ public class OutsideSceneUI : MonoBehaviour
         }
     }
 
+    void Start()
+    {
+        _title.SetActive(OutsideScene.IsFirstLoad());
+    }
+
+    void OnEnable()
+    {
+        _nug.OnMoved += HandleNugMoved;
+    }
+
+    void OnDisable()
+    {
+        _nug.OnMoved -= HandleNugMoved;
+    }
+
     private void Update()
     {
         _useDoorPrompt.SetActive(_nugDoorUser != null && _nugDoorUser.CanUseDoor);
@@ -38,5 +60,10 @@ public class OutsideSceneUI : MonoBehaviour
     {
         ScoreText.text = "Streak: " + GameManager.score.ToString();
         HighScoreText.text = "Best Streak: " + GameManager.instance.highScore.ToString();
+    }
+
+    private void HandleNugMoved()
+    {
+        _title.SetActive(false);
     }
 }

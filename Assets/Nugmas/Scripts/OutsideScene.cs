@@ -8,6 +8,11 @@ public class OutsideScene : MonoBehaviour
     [SerializeField]
     public Nug _nug;
 
+    public static bool IsFirstLoad()
+    {
+        return _isFirstLoad;
+    }
+
     private static bool _isFirstLoad = true;
 
     private void Start()
