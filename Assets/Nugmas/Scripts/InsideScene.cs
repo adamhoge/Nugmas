@@ -14,6 +14,11 @@ public class InsideScene : MonoBehaviour
     [SerializeField]
     private Camera _camera;
 
+    public void ToggleMusic()
+    {
+        MusicManager.Instance.ToggleMusic();
+    }
+
     private void Start()
     {
         _nug.MyDoorUser.OnUsedDoor += HandleNugUsedDoor;
@@ -34,6 +39,8 @@ public class InsideScene : MonoBehaviour
             ZoomedCameraOffset.y,
             _camera.transform.position.z
         );
+
+        _nug.MyRigidbody2D.linearVelocity = new Vector2(0.0f, _nug.MyRigidbody2D.linearVelocity.y);
     }
 
     private void HandleNugStoppedUsingWardrobe()

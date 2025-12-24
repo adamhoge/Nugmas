@@ -146,8 +146,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83d36ff1144023f4c9f9a450974f659b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Nug
-  jumpPower: 5
-  accelerationPower: 0.1
+  jumpPower: 8.1
+  accelerationPower: 0.15
   _myRigidbody2D: {fileID: 1109515863962939728}
   _myOutfit: {fileID: 1305165050258134778}
   _myDoorUser: {fileID: 703283670663373869}
@@ -164,11 +164,11 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 1.49
   m_LinearDamping: 0
   m_AngularDamping: 0.05
   m_GravityScale: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 0863f9c45c77b6c45b3e1f55a55bcf44, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
