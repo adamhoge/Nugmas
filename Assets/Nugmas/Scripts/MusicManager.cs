@@ -2,20 +2,24 @@ using UnityEngine;
 
 public class MusicManager : MonoBehaviour
 {
-    
+    public AudioSource _musicSource = null;
+
+    public static MusicManager Instance = null;
+
     void Start()
     {
-        GameObject[] music = GameObject.FindGameObjectsWithTag("MusicPlayer");
-        if(music.Length > 1)
+        if (Instance != null && Instance != this)
         {
-            Destroy(this.gameObject);
+            DestroyImmediate(this.gameObject);
+            return;
         }
-        
-         DontDestroyOnLoad(this.gameObject);
 
+        DontDestroyOnLoad(this.gameObject);
+        Instance = this;
     }
 
+    public void ToggleMusic()
+    {
+        _musicSource.enabled = !_musicSource.enabled;
+    }
 }
-
-
-    
